@@ -12,11 +12,8 @@
     audioElement.play();
 }
  
- touchEvent = (event) => {
-   event.target.classList.add('touch');
-}
 
 const keyElements = Array.from(document.querySelectorAll('.key'));
 keyElements.forEach(key => key.addEventListener('transitionend', removeStyle));
 window.addEventListener('keydown', playSound);
-window.addEventListener('touchstart', touchEvent);
+
